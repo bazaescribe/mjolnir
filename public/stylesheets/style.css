@@ -1,0 +1,70 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.panel{
+  padding: 40px;
+}
+
+.test-section{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px 0px 24px 0px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.question{
+  width: 19%;
+  height: 40px;
+  border-radius: 4px;
+  margin: 2px;
+  text-align: center;
+  background: #F3F3F3;
+}
+
+.question input{
+  width: 100%;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+}
+
+.card {
+  margin: 20px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+}
+
+#rating{
+  font-size: 80px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#score{
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.great{
+  color: #5F48F6;
+}
+
+.approved{
+  color: #2BEFB2;
+}
+
+.maybe{
+  color: #FCFC95;
+}
+
+.nope{
+  color: crimson;
+}
+
+
+

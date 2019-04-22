@@ -1,6 +1,6 @@
 html
   head
-    title Mjolnir Beta 0.0.1
+    title Mjolnir Beta 0.0.2
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
     link(rel='stylesheet', href='stylesheets/style.css', crossorigin='anonymous')
@@ -15,18 +15,21 @@ html
       .col-md-6.panel 
         form(action="")
           div
-            input(type="text", name="name")
-            input(type="text", name="secondname")
-            input(type="text", name="lastname")
-            input(type="date", name="birthday")
-            select(name="genre")
+            input(type="text", placeholder="Nombre completo", name="name").text-input
+            input(type="date", name="birthday").text-input
+            select(name="genre").select
+              option(value="" disabled selected) Género
               option(value="Female") Mujer
               option(value="Male") Hombre
               option(value="Other") Otro
-            select(name="status")
+            select(name="status").select
+              option(value="" disabled selected) Estado civil
               option(value="Single") Soltero
               option(value="Married") Casado
-            select(name="dependants")
+              option(value="Married") Viudo
+              option(value="Married") Divorciado
+            select(name="dependants").select
+              option(value="" disabled selected) Número de hijos
               option(value="0") Ninguno
               option(value="1") 1
               option(value="2") 2
@@ -146,7 +149,7 @@ html
               input(type="number", id="q36") 
 
         #buttons(style="text-align: center;")
-          button(onClick="test()") Evaluar
+          button(onClick="test()").button Evaluar
       .col-md-6(style="background: #f8f8f8;")
         .card
           h5 Los resultados del solicitante son

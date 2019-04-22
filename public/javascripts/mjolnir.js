@@ -54,5 +54,4 @@ function render(score){
   document.getElementById("score").innerHTML = "Factor de desconfianza " + score;
   document.getElementById("risk").innerHTML = "Tiene una posibilidad del <b>" + risk + "%</b> de cometer una falta grave.";
 
-
 }

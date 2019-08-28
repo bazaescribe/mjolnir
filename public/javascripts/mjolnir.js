@@ -16,12 +16,13 @@ function colect(){
     answer = document.getElementById(input).value;
     answers.push(parseInt(answer));
   }
+
   return(answers);
 }
 
 function evaluate(answers){
   var key = [2, 4, 10, 9, 12, 7, 18,	16, 13, 11, 1, 17, 3,14,	8,	15,	6,	5,	1,	7,	16,	15,	13,	3, 17, 12, 11, 9, 2, 18, 4, 10,	5, 14, 6, 8];
-  var stdDev = [2.3, 2.0, 2.8, 3.2, 3.2, 10.3, 1.9, 2.4, 3.3, 4.0, 3.4, 2.4, 1.9, 2.7, 3.0, 2.8, 2.9, 3.1, 2.5, 2.8, 3.5, 2.7, 2.9, 2.8, 3.1, 2.6, 2.6, 3.0, 2.4, 3.0, 2.8, 2.8, 2.8, 2.8, 2.6, 2.7];
+  var stdDev = [2.3,	2.0,	2.8,	3.2,	3.2,	10.3,	1.9,	2.4,	3.3,	4.0,	3.4,	2.4,	1.9,	2.7,	3.0,	2.8,	2.9,	3.1,	2.5,	2.8,	3.5,	2.7,	2.9,	2.8,	3.1,	2.6,	2.6,	3.0,	2.4,	3.0,	2.8,	2.8,	2.8,	2.8,	2.6,	2.7];
   
   var ansEv = 0;
   var shittyFactor = 0;
@@ -43,10 +44,13 @@ function render(score){
     rating = "great";
   } else if(score<30.23){
     rating = "approved";
+    $('#result').addClass("-aproved");
   } else if(score<35.34){
     rating = "maybe";
+    $('#result').addClass("-undefined");
   } else {
     rating = "nope";
+    $('#result').addClass("-rejected");
   }
 
   document.getElementById("rating").innerHTML = rating;
